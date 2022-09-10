@@ -9,7 +9,8 @@ import com.example.organizador.database.Entity.Usuario
 
 @Database(
     entities = [Usuario::class],
-    version = 1
+    version = 1,
+    exportSchema = true
 )
 
 abstract class AppDatabase: RoomDatabase() {
@@ -18,13 +19,16 @@ abstract class AppDatabase: RoomDatabase() {
 
 
     companion object{
+        @Volatile
         private var db : AppDatabase? = null
         fun instancia (context: Context) : AppDatabase{
             return db ?: Room.databaseBuilder(
                 context,
                 AppDatabase::class.java,
                 "db.organizador")
-                .build()
+                .build().also {
+                    db = it
+                }
         }
     }
 }

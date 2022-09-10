@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.organizador.database.Entity.Usuario
+import kotlinx.coroutines.flow.Flow as Flow
 
 @Dao
 interface UsuarioDao {
@@ -12,7 +13,7 @@ interface UsuarioDao {
     suspend fun insert(usuario: Usuario)
 
     @Query("SELECT * FROM Usuario WHERE id = :id")
-    suspend fun searchForId(id : String) : Usuario
+    fun searchForId(id: String): Flow<Usuario>
 
 
 }

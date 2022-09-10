@@ -31,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cadastro_texto">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cadastro_id_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Usuário" />
@@ -41,10 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-
         app:layout_constraintTop_toBottomOf="@+id/cadastro_id">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cadastro_nome_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nome" />
@@ -58,6 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cadastro_nome">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cadastro_senha_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Senha" />
