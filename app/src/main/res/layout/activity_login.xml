@@ -41,6 +41,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_inputLogin_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Login" />
@@ -56,13 +57,14 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login_inputSenha_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Senha" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/login_entrar"
+        android:id="@+id/login_botao_entrar"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="ENTRAR"
@@ -72,12 +74,12 @@
         app:layout_constraintTop_toBottomOf="@+id/login_inputSenha" />
 
     <Button
-        android:id="@+id/login_cadastro"
+        android:id="@+id/login_botao_cadastro"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="CADASTRAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_entrar" />
+        app:layout_constraintTop_toBottomOf="@+id/login_botao_entrar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
