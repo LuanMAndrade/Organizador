@@ -4,11 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.organizador.database.Dao.EstudoDao
 import com.example.organizador.database.Dao.UsuarioDao
+import com.example.organizador.database.Entity.Estudo
 import com.example.organizador.database.Entity.Usuario
 
 @Database(
-    entities = [Usuario::class],
+    entities = [Usuario::class,
+               Estudo::class],
     version = 1,
     exportSchema = true
 )
@@ -16,6 +19,8 @@ import com.example.organizador.database.Entity.Usuario
 abstract class AppDatabase: RoomDatabase() {
 
     abstract fun usuarioDao() : UsuarioDao
+
+    abstract fun estudoDao() : EstudoDao
 
 
     companion object{

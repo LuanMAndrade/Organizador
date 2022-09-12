@@ -24,16 +24,13 @@ class MainActivity : AppCompatActivity() {
         AppDatabase.instancia(this).usuarioDao()
     }
 
+    private val estudoDao by lazy {
+        AppDatabase.instancia(this).estudoDao()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        val map: MutableMap<String, Array<Int>> = mutableMapOf()
-        map["one"] = arrayOf(1,2)
-        map["two"] = arrayOf(3,4)
-        map["three"] = arrayOf(5,6)
-        Log.i("teste", "${map.values.size}")
-
 
         lifecycleScope.launch {
             dataStore.data.collect { preferences ->
