@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Organizador"
         tools:targetApi="31">
         <activity
-            android:name=".CadastroEstudoActivity"
+            android:name=".activities.CadastroEstudoActivity"
             android:exported="false" />
         <activity android:name=".activities.CadastroUsuarioActivity" />
         <activity android:name=".activities.LoginActivity" />

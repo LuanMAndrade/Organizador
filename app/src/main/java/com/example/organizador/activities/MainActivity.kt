@@ -28,15 +28,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val map: MutableMap<String, Int> = mutableMapOf()
-        map["one"] = 1
-        map["two"] = 2
-        map["three"] = 3
-
-        Log.i("teste", "${map.values}")
-
-
-
+        val map: MutableMap<String, Array<Int>> = mutableMapOf()
+        map["one"] = arrayOf(1,2)
+        map["two"] = arrayOf(3,4)
+        map["three"] = arrayOf(5,6)
+        Log.i("teste", "${map.values.size}")
 
 
         lifecycleScope.launch {
