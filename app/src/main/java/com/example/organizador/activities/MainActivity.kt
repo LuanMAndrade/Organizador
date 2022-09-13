@@ -45,9 +45,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.cardAlimentacao.setOnClickListener {}
         binding.cardEstudo.setOnClickListener {
-            startActivity(Intent(this, CadastroEstudoActivity::class.java))
+            startActivity(Intent(this, EstudoActivity::class.java))
         }
-        binding.cardTarefas.setOnClickListener { }
+        binding.cardTarefas.setOnTouchListener { view, motionEvent ->  }
         binding.cardOutros.setOnClickListener { }
 
     }
