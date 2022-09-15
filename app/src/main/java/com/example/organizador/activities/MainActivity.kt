@@ -41,13 +41,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        binding.cardAlimentacao.visibility = View.GONE
+        binding.cardAlimentacao.visibility
 
         binding.cardAlimentacao.setOnClickListener {}
         binding.cardEstudo.setOnClickListener {
             startActivity(Intent(this, EstudoActivity::class.java))
         }
-        binding.cardTarefas.setOnTouchListener { view, motionEvent ->  }
+        binding.cardTarefas.setOnTouchListener { view, motionEvent -> true }
         binding.cardOutros.setOnClickListener { }
 
     }
