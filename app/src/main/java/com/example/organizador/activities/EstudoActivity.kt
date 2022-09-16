@@ -18,6 +18,7 @@ class EstudoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
