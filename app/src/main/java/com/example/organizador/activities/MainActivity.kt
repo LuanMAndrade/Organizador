@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        binding.cardAlimentacao.visibility
+        binding.cardAlimentacao.visibility = View.GONE
 
         binding.cardAlimentacao.setOnClickListener {}
         binding.cardEstudo.setOnClickListener {
