@@ -3,10 +3,7 @@ package com.example.organizador.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.MotionEvent
-import android.view.View
+import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.preferences.core.edit
@@ -37,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         lifecycleScope.launch {
             dataStore.data.collect { preferences ->
                 preferences[stringPreferencesKey("usuarioLogado")]?.let { usuarioId ->
@@ -45,10 +43,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//        binding.mainTela.setOnTouchListener { view, motionEvent ->
-//            Toast.makeText(this, "Tocou-me", Toast.LENGTH_SHORT).show()
-//            true}
-
         binding.cardAlimentacao.visibility = View.GONE
 
         binding.cardAlimentacao.setOnClickListener {}
@@ -56,31 +50,44 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, EstudoActivity::class.java))
         }
 
+        binding.textView3.setOnDragListener { view, dragEvent ->
+            when(dragEvent.action) {
 
-        binding.textView3.setOnLongClickListener {
-                binding.cardTarefas.setOnTouchListener { view, event ->
-                    when (event.action) {
+                DragEvent.ACTION_DRAG_STARTED -> {}
 
-                        MotionEvent.ACTION_DOWN -> {
-                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
-                            Toast.makeText(this, "Apertou às $tempo", Toast.LENGTH_SHORT).show()
-                        }
 
-                        MotionEvent.ACTION_MOVE ->{
-                            binding.textView3.x = event.x
-                            binding.textView3.y = event.y
-                        }
+//                DragEvent.ACTION_DRAG_STARTED -> {}
 
-                        MotionEvent.ACTION_UP -> {
-                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
-                            Toast.makeText(this, "largou às $tempo", Toast.LENGTH_SHORT).show()
+            }
 
-                        }
-                    }
 
-                    false
-                }
-            false }
+
+            true }
+
+//        binding.textView3.setOnLongClickListener {
+//                binding.cardTarefas.setOnTouchListener { view, event ->
+//                    when (event.action) {
+//
+//                        MotionEvent.ACTION_DOWN -> {
+//                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
+//                            Toast.makeText(this, "Apertou às $tempo", Toast.LENGTH_SHORT).show()
+//                        }
+//
+//                        MotionEvent.ACTION_MOVE ->{
+//                            binding.textView3.x = event.x
+//                            binding.textView3.y = event.y
+//                        }
+//
+//                        MotionEvent.ACTION_UP -> {
+//                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
+//                            Toast.makeText(this, "largou às $tempo", Toast.LENGTH_SHORT).show()
+//
+//                        }
+//                    }
+//
+//                    false
+//                }
+//            false }
 
 
 
