@@ -47,55 +47,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.cardAlimentacao.setOnClickListener {}
         binding.cardEstudo.setOnClickListener {
-            startActivity(Intent(this, EstudoActivity::class.java))
+            startActivity(Intent(this, TesteCameraActivity::class.java))
         }
-
-        binding.textView3.setOnDragListener { view, dragEvent ->
-            when(dragEvent.action) {
-
-                DragEvent.ACTION_DRAG_STARTED -> {}
-
-
-//                DragEvent.ACTION_DRAG_STARTED -> {}
-
-            }
-
-
-
-            true }
-
-//        binding.textView3.setOnLongClickListener {
-//                binding.cardTarefas.setOnTouchListener { view, event ->
-//                    when (event.action) {
-//
-//                        MotionEvent.ACTION_DOWN -> {
-//                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
-//                            Toast.makeText(this, "Apertou às $tempo", Toast.LENGTH_SHORT).show()
-//                        }
-//
-//                        MotionEvent.ACTION_MOVE ->{
-//                            binding.textView3.x = event.x
-//                            binding.textView3.y = event.y
-//                        }
-//
-//                        MotionEvent.ACTION_UP -> {
-//                            val tempo = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(Date().time)
-//                            Toast.makeText(this, "largou às $tempo", Toast.LENGTH_SHORT).show()
-//
-//                        }
-//                    }
-//
-//                    false
-//                }
-//            false }
-
-
-
-
         binding.cardOutros.setOnClickListener {
-
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
