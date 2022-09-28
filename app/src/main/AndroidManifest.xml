@@ -14,8 +14,20 @@
         android:theme="@style/Theme.Organizador"
         tools:targetApi="31">
         <activity
-            android:name=".activities.TesteCameraActivity"
+            android:name=".CadastroRefeicoesActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.MacroCadastroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.FirstAccessActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.EstudoActivity"
             android:exported="false" />
@@ -26,13 +38,7 @@
         <activity android:name=".activities.LoginActivity" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

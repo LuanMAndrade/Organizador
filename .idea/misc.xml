@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1935" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_cadastro_estudo.xml" value="0.18" />
+        <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_cadastro_refeicoes.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_cadastro_usuario.xml" value="0.1" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_estudo.xml" value="0.18" />
+        <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_first_access.xml" value="0.22" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_macro_cadastro.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/layout/activity_teste_camera.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Luan/AndroidStudioProjects/Organizador/app/src/main/res/menu/menu_estudo_activity.xml" value="0.20416666666666666" />

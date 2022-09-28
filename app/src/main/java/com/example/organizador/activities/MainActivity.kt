@@ -25,11 +25,6 @@ class MainActivity : AppCompatActivity() {
         AppDatabase.instancia(this).usuarioDao()
     }
 
-    private val estudoDao by lazy {
-        AppDatabase.instancia(this).estudoDao()
-    }
-
-    @SuppressLint("ClickableViewAccessibility", "SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -41,15 +36,6 @@ class MainActivity : AppCompatActivity() {
                     val usuarioLogado = usuarioDao.searchForId(usuarioId)
                 } ?: startActivity(Intent(this@MainActivity, LoginActivity::class.java))
             }
-        }
-
-        binding.cardAlimentacao.visibility = View.GONE
-
-        binding.cardAlimentacao.setOnClickListener {}
-        binding.cardEstudo.setOnClickListener {
-            startActivity(Intent(this, TesteCameraActivity::class.java))
-        }
-        binding.cardOutros.setOnClickListener {
         }
     }
 
